@@ -1,6 +1,7 @@
 #include "functions.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int factorial(int n)
 {
@@ -31,4 +32,11 @@ void reverseString(char *str) {
         start++;
         end--;
     }
+}
+int lcm(int a , int b){
+if (a==0 || b==0)
+    return 0;
+a = abs(a);
+b = abs(b);
+return (a/gcd(a,b))*b;
 }
