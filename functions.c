@@ -82,3 +82,21 @@ int isEven(int n) {
     return (n % 2 == 0);
 }
 
+int reverseNumber(int n) {
+    int reversed = 0;
+    int isNegative = 0;
+    if (n < 0) {
+        isNegative = 1;
+        n = -n;  
+    }
+    while (n > 0) {
+        int digit = n % 10;   
+        reversed = reversed * 10 + digit;  
+        n /= 10;    
+    }
+    if (isNegative) {
+        reversed = -reversed;
+    }
+    return reversed;
+}
+
