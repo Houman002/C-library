@@ -81,4 +81,14 @@ int lcm(int a , int b){
 int isEven(int n) {
     return (n % 2 == 0);
 }
+int sumDigits(int n) {
+    if (n < 0) n = -n;
+    
+    int sum = 0;
+    while (n > 0) {
+        sum += n % 10; 
+        n /= 10;  
+    }
+    return sum;
+}
 
