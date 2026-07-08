@@ -17,6 +17,7 @@ int factorial(int n)
         return result;
 
 }
+
 int isPrime(int n) {
     if (n <= 1) {
         return 0;
@@ -38,7 +39,6 @@ int isPrime(int n) {
 
     return 1;
 }
-
 
 void reverseString(char *str) {
     if (str == NULL) return;
@@ -81,6 +81,18 @@ int lcm(int a , int b){
 int isEven(int n) {
     return (n % 2 == 0);
 }
+
+int sumDigits(int n) {
+    if (n < 0) n = -n;
+    
+    int sum = 0;
+    while (n > 0) {
+        sum += n % 10; 
+        n /= 10;  
+    }
+    return sum;
+}
+
 int reverseNumber(int n) {
     int reverse = 0;
 
